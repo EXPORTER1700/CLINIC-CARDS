@@ -1,13 +1,14 @@
-import {IRegistrationData, IUser, UserPositionEnum, UserRoleEnum} from "../types/user";
+import {IBaseUserInfo, IUser} from "../types/user";
 
-export const makeUserObject = (user: IRegistrationData): IUser => {
+export const makeUserObject = (user: IBaseUserInfo): IUser => {
     return ({
         ...user,
         firstName: '',
         lastName: '',
         id: String(Date.now()),
-        role: UserRoleEnum.doctor,
+        role: '',
         clinic: '',
-        position: UserPositionEnum.doctor,
+        position: '',
+        photo: ''
     })
 }

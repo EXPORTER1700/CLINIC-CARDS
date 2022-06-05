@@ -10,10 +10,15 @@
     max-width: 200px;
 }
 
-.links > a {
+.navigate > a {
     margin-right: 30px;
 }
 
-.links > a:last-child {
+.navigate > a:last-child {
     margin-right: 0;
+}
+
+.link {
+    color: var(--secondary-color);
+    text-decoration: none;
 }

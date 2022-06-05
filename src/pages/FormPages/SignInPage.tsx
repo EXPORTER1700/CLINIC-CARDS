@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from "./SignInPage.module.css"
-import SignInForm from "../../components/SignForm/SignInForm";
+import classes from "./FormPage.module.css"
+import SignInForm from "../../components/Forms/SignInForm";
 
 const SignInPage = () => {
     return (

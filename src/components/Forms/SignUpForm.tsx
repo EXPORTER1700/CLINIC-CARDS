@@ -5,15 +5,15 @@ import passwordIcon from "../../assets/images/password-icon.png"
 import emailIcon from "../../assets/images/email-icon.png"
 import phoneIcon from "../../assets/images/phone-icon.png"
 import CustomFormButton from "../../ui/CustomFormButton/CustomFormButton";
-import classes from "./SignForm.module.css"
+import classes from "./Form.module.css"
 import CustomErrorMessage from "../../ui/CustomErrorMessage/CustomErrorMessage";
 import {fetchUserWithParams} from "../../api/fetchUserWithParams";
 import {registrationUser} from "../../api/registrationUser";
-import {IRegistrationData} from "../../types/user";
+import {IBaseUserInfo} from "../../types/user";
 import CustomSuccessMessage from "../../ui/CustomSuccessMessage/CustomSuccessMessage";
 
 const SignUnForm = () => {
-    const [formData, setFormData] = useState<IRegistrationData>({
+    const [formData, setFormData] = useState<IBaseUserInfo>({
         username: '',
         password: '',
         email: '',

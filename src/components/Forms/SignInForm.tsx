@@ -3,7 +3,7 @@ import CustomFormInput from "../../ui/CustomFormInput/CustomFormInput";
 import userIcon from "../../assets/images/user-icon.png"
 import passwordIcon from "../../assets/images/password-icon.png"
 import CustomFormButton from "../../ui/CustomFormButton/CustomFormButton";
-import classes from "./SignForm.module.css"
+import classes from "./Form.module.css"
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import CustomErrorMessage from "../../ui/CustomErrorMessage/CustomErrorMessage";
 import {useActions} from "../../hooks/useAction";

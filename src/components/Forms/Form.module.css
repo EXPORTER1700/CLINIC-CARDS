@@ -9,6 +9,10 @@
     margin-bottom: 15px;
 }
 
+.container > select {
+    margin-bottom: 15px;
+}
+
 .container > p {
     margin-bottom: 15px;
 }

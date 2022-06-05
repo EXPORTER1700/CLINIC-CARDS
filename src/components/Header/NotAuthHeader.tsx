@@ -8,7 +8,7 @@ const NotAuthHeader = () => {
     return (
         <header className={classes.container}>
             <img src={logo} alt="logo" className={classes.logo}/>
-            <nav className={classes.links}>
+            <nav className={classes.navigate}>
                 <CustomLink to={routesEnum.home}>ГЛАВНАЯ</CustomLink>
                 <CustomLink to={routesEnum.signIn}>ВХОД</CustomLink>
                 <CustomLink to={routesEnum.signUn}>РЕГИСТРАЦИЯ</CustomLink>

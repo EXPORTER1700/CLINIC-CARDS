@@ -1,5 +1,5 @@
 export enum UserPositionEnum {
-    doctor = "Doctor",
+    worker = "Worker",
     owner = "Owner"
 }
 
@@ -8,22 +8,24 @@ export enum UserRoleEnum {
     assistant = "Assistant"
 }
 
-export interface IUser {
-    firstName: string
-    lastName: string
-    id: string
+export interface IBaseUserInfo {
     username: string
     password: string
     email: string
     phone: string
-    role: UserRoleEnum
-    clinic: string
-    position: UserPositionEnum
 }
 
-export interface IRegistrationData {
-    username: string
-    password: string
-    email: string
-    phone: string
+export interface IGeneralUserInfo {
+    firstName: string
+    lastName: string
+    photo: string
+    position: UserPositionEnum | ''
+}
+export interface IWorkingInfo {
+    role: UserRoleEnum | ''
+    clinic: string
+}
+
+export interface IUser extends IBaseUserInfo, IGeneralUserInfo, IWorkingInfo {
+    id: string
 }
