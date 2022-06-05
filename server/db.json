@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "EXPORTER1700",
+      "password": "123123",
+      "email": "i.stetsenko1998@gmail.com",
+      "phone": "+380996832337",
+      "firstName": "",
+      "lastName": "",
+      "id": "1654428252175",
+      "role": "Doctor",
+      "clinic": "",
+      "position": "Doctor"
+    }
+  ]
+}

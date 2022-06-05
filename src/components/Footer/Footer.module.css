@@ -1,0 +1,7 @@
+.container {
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}

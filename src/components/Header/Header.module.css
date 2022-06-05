@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    align-items: center;
+    border-bottom: 1px solid var(--third-color);
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.links > a {
+    margin-right: 30px;
+}
+
+.links > a:last-child {
+    margin-right: 0;
+}
