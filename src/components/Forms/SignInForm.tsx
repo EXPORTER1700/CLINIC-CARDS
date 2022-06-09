@@ -19,7 +19,7 @@ const SignInForm = () => {
         setError('')
         setFormData({...formData, [event.target.name]: event.target.value})
     }
-    const handleSubmit = (event: FormEvent) => {
+    const handleSubmit = async (event: FormEvent) => {
         event.preventDefault()
         login(formData.username, formData.password)
     }

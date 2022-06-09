@@ -1,0 +1,16 @@
+.buttons {
+    display: flex;
+}
+
+.buttons > div:first-child {
+    width: 80%;
+}
+
+.buttons > a {
+    text-decoration: none;
+    width: 20%;
+}
+
+.buttons > a > button {
+    height: 100%;
+}

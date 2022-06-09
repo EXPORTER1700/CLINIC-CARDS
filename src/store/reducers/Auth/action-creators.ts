@@ -1,8 +1,6 @@
 import {IUser} from "../../../types/user";
 import {AuthActions, AuthActionTypes} from "./types";
-import axios from "axios";
 import {AppDispatch} from "../index";
-import {FetchURL} from "../../../constants/fetchURL";
 import {fetchUserWithParams} from "../../../api/fetchUserWithParams";
 
 export const authActionCreators = {
@@ -10,6 +8,7 @@ export const authActionCreators = {
     setIsAuth: (payload: boolean): AuthActions => ({type: AuthActionTypes.SET_IS_AUTH, payload}),
     setIsLoading: (payload: boolean): AuthActions => ({type: AuthActionTypes.SET_IS_LOADING, payload}),
     setError: (payload: string): AuthActions => ({type: AuthActionTypes.SET_ERROR, payload}),
+    setIsAdmin: (payload: boolean): AuthActions => ({type: AuthActionTypes.SET_IS_ADMIN, payload}),
     login: (username: string, password: string) => async (dispatch: AppDispatch) => {
         dispatch(authActionCreators.setIsLoading(true))
         const {data} = await fetchUserWithParams({username, password})

@@ -1,15 +1,12 @@
 import React from 'react';
-import classes from "./FormPage.module.css"
 import SignInForm from "../../components/Forms/SignInForm";
+import Wrapper from "../../components/Wrapper/Wrapper";
 
 const SignInPage = () => {
     return (
-        <div className={classes.container}>
-            <div className={classes.formWrapper}>
-                <h2 className={classes.title}>Вход</h2>
-                <SignInForm/>
-            </div>
-        </div>
+        <Wrapper title={"Вход"}>
+            <SignInForm/>
+        </Wrapper>
     );
 };
 

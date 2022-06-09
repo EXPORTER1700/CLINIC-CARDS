@@ -5,13 +5,52 @@
       "password": "123123",
       "email": "i.stetsenko1998@gmail.com",
       "phone": "+380996832337",
-      "firstName": "",
-      "lastName": "",
-      "id": "1654429563480",
-      "role": "",
-      "clinic": "",
-      "position": "",
-      "photo": ""
+      "firstName": "Илья ",
+      "lastName": "Стеценко",
+      "id": "1654527874938",
+      "clinics": [
+        "1654612052551",
+        "1654613587395"
+      ],
+      "notifications": []
+    },
+    {
+      "username": "JLNVKV",
+      "password": "123123",
+      "email": "starukhina211098@gmail.com",
+      "phone": "+380957322530",
+      "firstName": "Юлия",
+      "lastName": "Старухина",
+      "id": "1654609491932",
+      "clinics": [
+        "1654612052551"
+      ],
+      "notifications": []
+    }
+  ],
+  "clinics": [
+    {
+      "id": "1654612052551",
+      "patients": [],
+      "workers": [
+        "1654527874938",
+        "1654609491932"
+      ],
+      "admin": "1654527874938",
+      "events": [],
+      "name": "DG Clinic",
+      "password": "123123"
+    },
+    {
+      "id": "1654613587395",
+      "patients": [],
+      "workers": [
+        "1654527874938"
+      ],
+      "admin": "1654527874938",
+      "events": [],
+      "name": "TM Clinic",
+      "password": "123123"
     }
   ]
 }

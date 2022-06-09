@@ -11,19 +11,25 @@ import {fetchUserWithParams} from "../../api/fetchUserWithParams";
 import {registrationUser} from "../../api/registrationUser";
 import {IBaseUserInfo} from "../../types/user";
 import CustomSuccessMessage from "../../ui/CustomSuccessMessage/CustomSuccessMessage";
+import {linksEnum} from "../../constants/routes";
+import {useNavigate} from "react-router-dom";
 
 const SignUnForm = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState<IBaseUserInfo>({
+        firstName: '',
+        lastName: '',
         username: '',
         password: '',
         email: '',
         phone: '',
     })
-    const [success, setSuccess] = useState('')
-    const [error, setError] = useState('')
-    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setSuccess('')
-        setError('')
+    const [message, setMessage] = useState({
+        error: '',
+        success: ''
+    })
+    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        setMessage({error: '', success: ''})
         setFormData({...formData, [event.target.name]: event.target.value})
     }
     const handleSubmit = async (event: FormEvent) => {
@@ -36,19 +42,32 @@ const SignUnForm = () => {
         })
         if (!data.length) {
             registrationUser(formData)
-            setSuccess('Регистрация успешна')
-            setFormData({
-                username: '',
-                password: '',
-                email: '',
-                phone: '',
-            })
+            setMessage({...message, success: "Регистрация успешна"})
+            setTimeout(() => {
+                navigate(linksEnum.signIn)
+            }, 500)
         } else {
-            setError('Такой пользователь уже есть')
+            setMessage({...message, error: 'Пользователь с такими данными уже существует'})
         }
     }
     return (
         <form onSubmit={handleSubmit} className={classes.container}>
+            <CustomFormInput
+                type="text"
+                src={userIcon}
+                placeholder="Имя"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+            />
+            <CustomFormInput
+                type="text"
+                src={userIcon}
+                placeholder="Фамилия"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+            />
             <CustomFormInput
                 type="text"
                 src={userIcon}
@@ -81,8 +100,8 @@ const SignUnForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
             />
-            {error && <CustomErrorMessage>{error}</CustomErrorMessage>}
-            {success && <CustomSuccessMessage>{success}</CustomSuccessMessage>}
+            {message.error && <CustomErrorMessage>{message.error}</CustomErrorMessage>}
+            {message.success && <CustomSuccessMessage>{message.success}</CustomSuccessMessage>}
             <CustomFormButton type={"submit"}>Регистрация</CustomFormButton>
         </form>
     );

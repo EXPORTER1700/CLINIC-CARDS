@@ -6,7 +6,8 @@ const initialState: AuthState = {
     user: {} as IUser,
     isAuth: false,
     isLoading: false,
-    error: ''
+    error: '',
+    isAdmin: false
 }
 
 export const authReducer = (state = initialState, action: AuthActions): AuthState => {
@@ -19,6 +20,8 @@ export const authReducer = (state = initialState, action: AuthActions): AuthStat
             return {...state, error: action.payload, isLoading: false}
         case AuthActionTypes.SET_IS_LOADING:
             return {...state, isLoading: action.payload}
+        case AuthActionTypes.SET_IS_ADMIN:
+            return {...state, isAdmin: action.payload}
         default:
             return state
     }
