@@ -10,7 +10,12 @@ interface MyFormButtonProps {
 
 const CustomFormButton: FC<MyFormButtonProps> = ({type, children}) => {
     return (
-        <button className={classes.button} type={type}>{children}</button>
+        <button
+            className={classes.button}
+            type={type}
+        >
+            {children}
+        </button>
     );
 };
 

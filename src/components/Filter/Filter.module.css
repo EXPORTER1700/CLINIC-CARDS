@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.container > a {
+    width: 20%;
+}
+
+.container > a > button {
+    height: 100%;
+}

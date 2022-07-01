@@ -18,7 +18,7 @@ const WorkersListPage = () => {
         }
         fetchWorkers()
         setIsLoading(false)
-    })
+    }, [])
     if (isLoading) return <Loader/>
     return (
         <Wrapper title={"Список работников"}>

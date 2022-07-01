@@ -1,29 +1,29 @@
 export enum linksEnum {
     slash = "/",
-    signIn = "/signIn",
-    signUn = "/signUn",
-    userProfile = "/userProfile",
-    createClinic = "/createClinic",
-    listClinics = "/listClinics",
-    addClinic = "/addClinic",
+    signIn = "/sign-in",
+    signUn = "/sign-un",
+    userProfile = "/user-profile",
+    createClinic = "/create-clinic",
+    listClinics = "/list-clinics",
+    addClinic = "/add-clinic",
     clinic = "/clinic",
     workers = "/workers",
     patients = "/patients",
-    createPatient = "/createPatient"
+    createPatient = "/create-patient"
 }
 
 export enum routesEnum {
     slash = "/",
-    signIn = "signIn",
-    signUn = "signUn",
-    userProfile = "userProfile",
-    createClinic = "createClinic",
-    listClinics = "listClinics",
-    addClinic = "addClinic",
+    signIn = "sign-in",
+    signUn = "sign-un",
+    userProfile = "user-profile",
+    createClinic = "create-clinic",
+    listClinics = "list-clinics",
+    addClinic = "add-clinic",
     clinic = "clinic",
     workers = "workers",
     patients = "patients",
-    createPatient = "createPatient",
+    createPatient = "create-patient",
     id = ":id",
     some = "*"
 }

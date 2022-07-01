@@ -31,7 +31,16 @@
   "clinics": [
     {
       "id": "1654612052551",
-      "patients": [],
+      "patients": [
+        {
+          "id": "123123",
+          "firstName": "Ivan",
+          "lastName": "Real",
+          "dateOfBirth": "25.06.1998",
+          "phone": "+380996832337",
+          "appointments": []
+        }
+      ],
       "workers": [
         "1654527874938",
         "1654609491932"
